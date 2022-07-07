@@ -25,4 +25,7 @@ jobs:
       - name: Install SSH Key
         uses: actions/checkout@v1
         with:
+          host: kx01.smartsensedesign.net
+          username: ninenox
           key: ${{ secrets.PRIVATE_KEY }} 
+          port: 22
