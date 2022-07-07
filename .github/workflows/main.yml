@@ -23,6 +23,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Install SSH Key
-        uses: ninenox-dev/python_vs_rust_read_aruco@v2
+        uses: ninenox-dev/python_vs_rust_read_aruco@release
         with:
           key: ${{ secrets.PRIVATE_KEY }} 
