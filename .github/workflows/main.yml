@@ -22,11 +22,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: ninenox-dev/python_vs_rust_read_aruco@master
+      steps:
+      - name: Install SSH Key
+        uses: ninenox-dev/ssh-key-action@v2
         with:
-          command: ls -a
-          host: ${{ secrets.HOST }}
-          username: ninenox
-          # passphrase: ${{ secrets.PASSPHRASE }}
-          privateKey: ${{ secrets.PRIVATE_KEY}}
+          key: ${{ secrets.PRIVATE_KEY }} 
