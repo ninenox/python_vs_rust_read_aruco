@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: ninenox-dev/python_vs_rust_read_aruco
+      - uses: actions/checkout@v3
         with:
           command: ls -a
           host: kx01.smartsensedesign.net
