@@ -46,12 +46,13 @@ fn main() -> Result<()> { // Note, this is anyhow::Result
     // Open the web-camera (assuming you have one)
     let mut cam = videoio::VideoCapture::new(0, videoio::CAP_ANY)?;
     
+    let dictionary_ptr = aruco::get_predefined_dictionary(aruco::PREDEFINED_DICTIONARY_NAME::DICT_6X6_250)?;
+
     loop {
         let start = Instant::now();
         let mut frame = Mat::default();
-        let dictionary_ptr = aruco::get_predefined_dictionary(aruco::PREDEFINED_DICTIONARY_NAME::DICT_6X6_250)?;
         cam.read(&mut frame)?;
-        find_aruco_markers(&mut frame,dictionary_ptr);
+        find_aruco_markers(&mut frame, dictionary_ptr.clone());
         highgui::imshow("window", &frame)?;
         let key = highgui::wait_key(1)?;
         if key == 113 { // quit with q
