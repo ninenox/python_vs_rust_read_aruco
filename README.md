@@ -2,11 +2,11 @@
 
 ## Python (read Aruco)
 
-Time elapsed : 0.03238415718078613 s<br>
-Time elapsed : 0.03589653968811035 s<br>
-Time elapsed : 0.03564810752868652 s<br>
-Time elapsed : 0.02923154830932617 s<br>
-Time elapsed : 0.03058075904846191 s<br>
+Time elapsed : 32.38415718078613 ms<br>
+Time elapsed : 35.89653968811035 ms<br>
+Time elapsed : 35.64810752868652 ms<br>
+Time elapsed : 29.23154830932617 ms<br>
+Time elapsed : 30.58075904846191 ms<br>
 
 ## Rust (read Aruco)
 
